@@ -9,5 +9,5 @@ php:
   
 build:
   ci:
-   # - sleep 10m
+    - sleep 10m
     - php --version
