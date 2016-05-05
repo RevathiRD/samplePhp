@@ -10,4 +10,4 @@ php:
 build:
   ci:
   #  - sleep 10m
-    - php version
+    - php --version
