@@ -20,6 +20,6 @@ integrations:
         - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
         - FOO=bar
         - FIZZ=buzz
-      on_pull_request: always
+      on_pull_request: never
       
       
