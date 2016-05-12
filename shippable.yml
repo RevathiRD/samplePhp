@@ -11,3 +11,12 @@ build:
   ci:
   #  - sleep 10m
     - php --version
+integrations:
+  notifications:
+    - integrationName: ship-webhook
+      type: webhook
+      payload:
+        - API_URL=$SHIPPABLE_API_URL
+        - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
+        - FOO=bar
+        - FIZZ=buzz
