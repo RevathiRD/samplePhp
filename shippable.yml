@@ -9,19 +9,24 @@ php:
   
 build:
   ci:
-  #  - sleep 10m
+    - MESSAGE_FROM_CI="[- This is a message from the Shippable CI section]"
+    - ANOTHER_MESSAGE_FROM_CI="[- Another message from the Shippable CI section]"
+    - TEST="message"
     - php --version
-#integrations:
- # notifications:
-  #  - integrationName: ship-webhook
-   #   type: webhook
-    #  payload:
-     #   - API_URL=$SHIPPABLE_API_URL
-      #  - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
-       # - FOO=bar
-        #- FIZZ=buzz
-      #on_pull_request: never
-      
-      
+
+  post_ci:
+    - POST_CI_MESSAGE="[- This is from POST CI]"
+    - TEST_MESSAGE="verify message"
+
+integrations:
+  notifications:
+    - integrationName: ship-eventtrigger
+      type: webhook
+      payload:
+        - API_URL=$SHIPPABLE_API_URL
+        - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
+        - $MESSAGE_FROM_CI
+        - $ANOTHER_MESSAGE_FROM_CI
+        - $TEST
       
       
