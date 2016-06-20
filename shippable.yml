@@ -25,9 +25,14 @@ integrations:
       payload:
         - API_URL=$SHIPPABLE_API_URL
         - CONTAINER_NAME=$SHIPPABLE_CONTAINER_NAME
-        - env1=$MESSAGE_FROM_CI
-        - env2=$ANOTHER_MESSAGE_FROM_CI
-        - env3=$TEST
+        - ci_message=$MESSAGE_FROM_CI
+        - ci_another_message=$ANOTHER_MESSAGE_FROM_CI
+        - ci_test_message=$TEST
+        - post_ci=$POST_CI_MESSAGE
+        - post_ci_19=$TEST_MESSAGE
+        
+        
+        
     
     
     
