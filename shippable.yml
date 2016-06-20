@@ -20,7 +20,7 @@ build:
 
 integrations:
   notifications:
-    - integrationName: ship-issuecreation1
+    - integrationName: ship-isssuecreation1 
       type: webhook
       payload:
         - title=Success - $REPO_FULL_NAME - $BUILD_NUMBER
