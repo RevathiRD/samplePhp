@@ -30,7 +30,9 @@ integrations:
         - ci_test_message=$TEST
         - post_ci=$POST_CI_MESSAGE
         - post_ci_19=$TEST_MESSAGE
-        
+      branches:
+        only:
+         - test_webhook
         
         
         
