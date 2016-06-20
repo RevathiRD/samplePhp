@@ -28,7 +28,7 @@ integrations:
         - env1=$MESSAGE_FROM_CI
         - env2=$ANOTHER_MESSAGE_FROM_CI
         - env3=$TEST
-      
+    
       
       
       
