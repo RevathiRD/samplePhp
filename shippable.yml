@@ -13,10 +13,12 @@ build:
     - ANOTHER_MESSAGE_FROM_CI="[- Another message from the Shippable CI section]"
     - TEST="message"
     - php --version
+    - foo=bar
 
   post_ci:
     - POST_CI_MESSAGE="[- This is from POST CI]"
     - TEST_MESSAGE="verify message"
+    - goo=bar
 
 integrations:
   notifications:
@@ -30,6 +32,8 @@ integrations:
         - ci_test_message=$TEST
         - post_ci=$POST_CI_MESSAGE
         - post_ci_19=$TEST_MESSAGE
+        - env1=$foo
+        - env2=$goo
       branches:
         only:
          - test_webhook
